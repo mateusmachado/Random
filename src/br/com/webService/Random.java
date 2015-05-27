@@ -20,22 +20,20 @@ public class Random {
 		Map headers = (Map) mc.get(MessageContext.HTTP_REQUEST_HEADERS);
 		List usernameList = (List) headers.get("Username");
 		List passwordList = (List) headers.get("Password");
-		
-		String username = usernameList != null ? usernameList.get(0).toString() : null;
-		String password = usernameList != null ? passwordList.get(0).toString() : null;
-		
+
+		String username = usernameList != null ? usernameList.get(0).toString()
+				: null;
+		String password = usernameList != null ? passwordList.get(0).toString()
+				: null;
+
 		System.out.println(username);
 		System.out.println(password);
-		
-		if("k19".equalsIgnoreCase(username) && "k23".equalsIgnoreCase(password)){
+
+		if ("k19".equalsIgnoreCase(username)
+				&& "k23".equalsIgnoreCase(password)) {
 			return Math.random() * max;
 		} else {
 			throw new RuntimeException("Usuário ou Senha incorreto!");
 		}
 	}
-
-	// public double next(double max){
-	// return Math.random() * max;
-	//
-	// }
 }

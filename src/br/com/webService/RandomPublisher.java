@@ -7,7 +7,7 @@ public class RandomPublisher {
 
 		System.out.println("Random webService start...");
 		Random random = new Random();
-		Endpoint.publish("http://localhost:8080/random", random);
+		Endpoint.publish("http://localhost:9090/random", random);
 
 //		System.out.println();
 	}

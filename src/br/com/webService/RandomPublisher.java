@@ -9,6 +9,5 @@ public class RandomPublisher {
 		Random random = new Random();
 		Endpoint.publish("http://localhost:9090/random", random);
 
-//		System.out.println();
 	}
 }
